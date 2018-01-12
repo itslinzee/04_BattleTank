@@ -2,6 +2,7 @@
 
 #include "TankPlayerController.h"
 #include "Engine/World.h"
+#include "Tank.h"
 
 void ATankPlayerController::BeginPlay()
 {
@@ -57,6 +58,7 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
 	}
 
 	return true;
+	//return (HitLocation != FVector(0));
 }
 
 bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const
