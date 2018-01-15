@@ -24,4 +24,8 @@ private:
 	ATank* AITank = nullptr;
 
 	ATank* PlayerTank = nullptr;
+
+	// How close can the AI tank get to the player
+	//UPROPERTY(BlueprintDefautsOnly)
+		float AcceptanceRadius = 3000; // TODO find sensible default (Assume in cm)
 };
