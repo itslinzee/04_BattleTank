@@ -17,15 +17,11 @@ class BATTLETANK_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 	
-public:
+private:
+	virtual void BeginPlay() override;
+
 	virtual void Tick(float DeltaSeconds) override;
 
-private:
-	ATank* AITank = nullptr;
-
-	ATank* PlayerTank = nullptr;
-
 	// How close can the AI tank get to the player
-	//UPROPERTY(BlueprintDefautsOnly)
-		float AcceptanceRadius = 3000; // TODO find sensible default (Assume in cm)
+	float AcceptanceRadius = 3000; // TODO find sensible default (Assume in cm)
 };
